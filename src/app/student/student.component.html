@@ -1,0 +1,11 @@
+<div *ngIf="student">
+  Student: <a href="#"(click)="clicked()">{{student.name}}</a>
+  <div *ngIf="student.isJedi"><!-- <div [hidden]="!student.isJedi">-->
+    Jedi Temple: {{student.temple}} <button type="button" name="button" (click)="description.focus()">Focus!</button>
+    <textarea name="name" rows="8" cols="10" #description></textarea>
+  </div>
+</div>
+
+<p *ngIf="!student">
+  Sem dados para exibir!
+</p>
